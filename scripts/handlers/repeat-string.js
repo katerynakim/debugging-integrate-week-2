@@ -7,22 +7,20 @@ function repeatStringHandler() {
   debugger;
   console.log('\n--- action: repeat string ---');
   console.log('range:', typeof range, '\n', range);
-  console.log('stringToRepeat:', typeof stringToRepeat, '\n', stringToRepeat);
+  
 
   // read inputs from user
   const stringToRepeat = prompt('enter a string to repeat');
   console.log('stringToRepeat:', typeof stringToRepeat, '\n', stringToRepeat);
-  if (stringToRepeat !== null) {
-    return;
-  }
+  if ( typeof stringToRepeat !== 'string') { throw new TypeError();};
 
   // perform core logic
-  let repeatedString;
+  let repeatedString = stringToRepeat + ` `;
   for (let i = 1; i < range; i++) {
-    repeatedString += repeatedString;
+    repeatedString += stringToRepeat + ` ` ;
   }
   console.log('repeatedString:', typeof repeatedString, '\n', repeatedString);
 
   // alert result for the user
-  alert(stringToRepeat);
+  alert(repeatedString);
 }

@@ -22,12 +22,31 @@ function evensOrOddsHandler() {
       "2, 4, 6, 8, "
     ...
   */
-  let listedNumbers = '';
-  for (_; _; _) {
-
+  let listedEvens = '';
+  for ( let i = 1; i <= range ; i++) {
+    if ((i % 2) !== 0) { 
+      continue;
+    }
+    listedEvens += i + `, `;
   }
-  console.log('listedNumbers:', typeof listedNumbers, '\n', listedNumbers);
+  console.log('listedEvens:', typeof listedEvens, '\n', listedEvens);
 
   // alert result for the user
-  alert(listedNumbers);
+  alert(listedEvens);
+
+
+  const displayOdds = confirm('would you like to see odd numbers?');
+  console.log('displayOdds:', typeof displayOdds, '\n', displayOdds);
+
+  let listedOdds = '';
+  for ( let i = 1; i <= range; i++) {
+    if ((i % 2) === 0) {
+      continue;
+    }
+    listedOdds += i + `, `;
+  }
+  console.log('listedOdds:', typeof listedOdds, '\n', listedOdds);
+
+  alert(listedOdds);
+
 }
